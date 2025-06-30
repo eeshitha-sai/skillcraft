@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bright Landing Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fffaf0;
+      color: #222;
+    }
+
+    /* NAVIGATION */
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: #ff6f61;
+      padding: 20px 40px;
+      transition: 0.3s ease;
+      z-index: 1000;
+    }
+
+    nav.scrolled {
+      background-color: #ff3d00;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 15px;
+      transition: 0.3s;
+      border-radius: 4px;
+    }
+
+    nav ul li a:hover {
+      background: #ffccbc;
+      color: #000;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ffd700, #ff69b4);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+    }
+
+    header h1 {
+      font-size: 3.5em;
+      background: rgba(0,0,0,0.3);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+      background: #ffffff;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(255, 105, 135, 0.2);
+    }
+
+    section h2 {
+      color: #ff3d00;
+      margin-bottom: 15px;
+    }
+
+    section p, section ul {
+      font-size: 1.1em;
+      color: #444;
+    }
+
+    section ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    footer {
+      background: #ff6f61;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      font-weight: bold;
+    }
+
+    a {
+      color: #ff1493;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        background: #ff6f61;
+        padding: 10px;
+      }
+
+      nav ul li {
+        text-align: center;
+      }
+
+      header h1 {
+        font-size: 2.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER -->
+  <header id="home">
+    <h1>Bright & Fun Landing Page</h1>
+  </header>
+
+  <!-- SECTIONS -->
+  <section id="about">
+    <h2>About</h2>
+    <p>This colorful landing page features a fixed, interactive navbar with responsive design and scroll effects, all in one HTML file.</p>
+  </section>
+
+  <section id="features">
+    <h2>Features</h2>
+    <ul>
+      <li>✨ Vibrant color scheme</li>
+      <li>✨ Sticky and interactive navbar</li>
+      <li>✨ Responsive layout for mobile</li>
+      <li>✨ Simple and clean design</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Drop us an email at <a href="mailto:bright@example.com">bright@example.com</a> to get in touch!</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 Bright Landing Page. All rights reserved.
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    const navbar = document.getElementById('navbar');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+</body>
+</html>
